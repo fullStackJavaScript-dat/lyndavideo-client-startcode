@@ -14,11 +14,12 @@ import AllFriends from "./AllFriends"
 import FindFriend from "./FindFriend"
 import Home from "./Home"
 
-const URI = "http://localhost:8080/graphql"
+//const URI = "http://localhost:8080/graphql"
+const URI = "http://63db3b33.ngrok.io/graphql"
 
-// const client = new ApolloClient({
-//   uri: URI
-// })
+const client = new ApolloClient({
+  uri: URI
+})
 
 export default function App() {
   return (
@@ -54,7 +55,7 @@ export default function App() {
                 <FindFriend />
               </Route>
               <Route path="/addFriend">
-                <AddFriend allowEdit={true}/>
+                <AddFriend allowEdit={true} />
               </Route>
 
             </Switch>
