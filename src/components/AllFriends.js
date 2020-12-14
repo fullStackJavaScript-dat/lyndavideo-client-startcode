@@ -18,4 +18,5 @@ const ALL_FRIENDS = gql`
 
 export default function All() {
   return <h2>Fetch and show all friends here</h2>
+
 }
