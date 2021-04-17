@@ -7,8 +7,7 @@ import {
   NavLink
 } from "react-router-dom";
 
-import { ApolloProvider } from "@apollo/react-hooks"
-import ApolloClient from "apollo-boost"
+import { ApolloProvider,ApolloClient,InMemoryCache } from "@apollo/client"
 import AddFriend from "./AddFriend";
 import AllFriends from "./AllFriends"
 import FindFriend from "./FindFriend"
@@ -17,7 +16,8 @@ import Home from "./Home"
 const URI = "http://localhost:8080/graphql"
 
 const client = new ApolloClient({
-  uri: URI
+  uri: URI,
+  cache: new InMemoryCache()
 })
 
 export default function App() {
